@@ -40,17 +40,13 @@ a {
     background-color: var(--main-white);
 }
 
-.main-nav-link {
-    font-size: 14px;
+.main-nav-link {    
     font-weight: 700;
     line-height: 26px;
     color: var(--main-black);
 }
 
-.main-nav-link:visited,
-.hashtag:visited,
-.phone:visited,
-.hotels-item-link:visited {
+.global-link:visited {
     color: var(--main-black);
 }
 
@@ -59,17 +55,11 @@ a {
     color: var(--brown-one);
 }
 
-.main-nav-link:hover,
-.hashtag:hover,
-.phone:hover,
-.hotels-item-link:hover {
+.global-link:hover {
     color: var(--blue-one);
 }
 
-.main-nav-link:active,
-.hashtag:active,
-.phone:active,
-.hotels-item-link:active {
+.global-link:active {
     color: var(--main-black);
     opacity: 0.3;
 }
@@ -82,8 +72,12 @@ h1, h2, h3, .bold-header  {
     color: var(--main-black);    
 }
 
-.big-reason * {
+.big-reason {
     background-color: var(--blue-one);
+    color: var(--main-white);
+}
+
+.big-reason .reason-title {    
     color: var(--main-white);
 }
 
@@ -92,14 +86,11 @@ h1, h2, h3, .bold-header  {
 }
 
 /*Footer*/
-footer * {
-    line-height: 26px;
-    color: var(--main-black); 
-}
-
-.footer-contacts {
+.footer-contacts a {
     font-size: 21px;
+    line-height: 26px;
     font-weight: 700;
+    color: var(--main-black);
 }
 
 /*Social media*/
@@ -117,11 +108,11 @@ footer * {
     background-color: var(--blue-two);    
 }
 
-.footer-media-item * {
+.footer-media-item a {
     color: var(--main-white);        
 }
 
-.footer-media-item:active * {
+.footer-media-item:active a {
     opacity: 0.3;
 }
 
