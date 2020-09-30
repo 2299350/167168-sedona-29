@@ -1,3 +1,255 @@
-h1 {
-    color: red;
+:root {
+    --main-black: #000;
+    --main-white: #fff;
+    --main-grey: #EEEEEE;
+    --second-grey: #F2F2F2;
+    --third-grey: #666666;
+    --forth-grey: #CACACA;
+    --blue-one: #81B3D2;
+    --blue-two: #669EC0;
+    --blue-three: #5496BD;
+    --brown-one: #766357;
+    --brown-two: #604E43;
+    --brown-three: #503E33;
+    --brown-four: #231F20;
+    --brown-five: #BDBBBC;
+}
+
+li {
+    list-style-type: none;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;    
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Main navigation*/
+.main-nav {
+    background-color: var(--main-white);
+}
+
+.main-nav-link {    
+    font-weight: 700;
+    line-height: 26px;
+    color: var(--main-black);
+}
+
+.global-link:visited {
+    color: var(--main-black);
+}
+
+/*Order is important*/
+.main-nav-item .active-tab {
+    color: var(--brown-one);
+}
+
+.global-link:hover {
+    color: var(--blue-one);
+}
+
+.global-link:active {
+    color: var(--main-black);
+    opacity: 0.3;
+}
+
+/*Main*/
+h1, h2, h3, .bold-header  {
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 26px;
+    color: var(--main-black);    
+}
+
+.big-reason {
+    background-color: var(--blue-one);
+    color: var(--main-white);
+}
+
+.big-reason .reason-title {    
+    color: var(--main-white);
+}
+
+.small-reasons {
+    background-color: var(--main-grey);
+}
+
+/*Footer*/
+.footer-contacts a {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--main-black);
+}
+
+/*Social media*/
+.footer-media-item {
+    width: 46px;
+    height: 48px;    
+    background-color: var(--blue-one);
+}
+
+.footer-media-item:active {
+    background-color: var(--blue-three); 
+}
+
+.footer-media-item:hover {
+    background-color: var(--blue-two);    
+}
+
+.footer-media-item a {
+    color: var(--main-white);        
+}
+
+.footer-media-item:active a {
+    opacity: 0.3;
+}
+
+/*HTML Academy Logo*/
+.footer-developer-text {
+    font-weight: normal;
+}
+
+.footer-developer-link {
+    color: var(--brown-four);
+}
+
+.footer-developer-link:hover {
+    color: var(--blue-one);
+}
+
+.footer-developer-link:active {
+    color: var(--brown-five);
+}
+
+/*Bold headers*/
+.bold-header {
+    font-weight: 700;
+}
+
+/*Sorting*/
+.sorting-hotels-list-title,
+.sorting-hotels-item {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.sorting-hotels-item:not(.sorting-hotels-item-chosen) {
+    
+    border-bottom: 1px dotted #81b3d2;
+}
+
+.sorting-hotels-item:active,
+.sorting-hotels-item-chosen {    
+    border-bottom: none;
+}
+
+.sorting-hotels-item-chosen a {
+    color: var(--blue-one);
+    opacity: 1;
+}
+
+.sorting-hotels-link {
+    color: var(--main-black);
+    opacity: 0.3;
+}
+
+.sorting-hotels-link:hover {
+    color: var(--blue-one);
+    opacity: 1;
+}
+
+.sorting-hotels-link:active {
+    color: var(--main-black);
+    opacity: 1;
+}
+
+/*Arrows*/
+.arrow {
+    display: inline-block;    
+}
+
+.arrow a {
+    color: var(--forth-grey);
+}
+
+.arrow .arrow-down-link {
+    color: var(--blue-one);
+}
+
+.arrow:hover a {
+    color: var(--main-black);
+}
+
+.arrow:active a {
+    color: var(--blue-one);
+}
+
+/*Buttons*/
+.btn {
+    display: inline-block;    
+    padding: 3px 17px;    
+    font-weight: 700;
+    color: var(--main-white);
+}
+
+/*Details button*/
+.hotels-item-btn-details {
+    background-color: var(--blue-one);
+}
+
+.hotels-item-btn-details:hover {
+    background-color: var(--blue-two);
+}
+
+.hotels-item-btn-details:active {
+    background-color: var(--blue-three);
+}
+
+/*Book button*/
+.hotels-item-btn-book {
+    background-color: var(--brown-one);
+}
+
+.hotels-item-btn-book:hover {
+    background-color: var(--brown-two);
+}
+
+.hotels-item-btn-book:active {
+    background-color: var(--brown-three);
+}
+
+/*Button text*/
+.button-link {
+    color: var(--main-white);
+}
+
+.btn:active .button-link{   
+    opacity: 0.3;
+}
+
+/*Hotel mark*/
+.hotels-item-mark {
+    display: inline-block;    
+    padding: 3px 14px;
+    color: var(--main-white);
+    background-color: var(--second-grey);
+    color: var(--third-grey);
+}
+
+/*Hotel stars*/
+.hotels-item-stars {
+    color: var(--blue-one);
 }
