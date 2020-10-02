@@ -1,151 +1,168 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Sedona">
-    <meta name="author" content="alitsman">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">    
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <!--Header-->
-      <header>
-        <!--Main navigation-->
-        <nav>
-          <ul>
-            <li><a href="">Информация</a></li>
-            <li><a href="">Фото и видео</a></li>
-            <li><a href="index.html"><img src="https://via.placeholder.com/138x70" alt="Logo"></a></li>
-            <li><a href="">Карта штата</a></li>
-            <li><a href="">Гостиницы</a></li>
-         </ul>
-       </nav>
 
-      <!--Main-->
-      <main>
-          <!--Search form-->
-          <form>
-            <!--The form is going to be added later-->
-            <img src="https://via.placeholder.com/1200x217" alt="Search form">
-          </form>
-          <!--Search results header-->
-          <section>
-              <div>
-                <span>Найдено: 3</span>
-                <span>Сортировка:</span>         
-                <ul>
-                  <li><a href="">По цене</a></li>
-                  <li><a href="">По типу</a></li>
-                  <li><a href="">По рейтингу</a></li>
-                </ul>
-              </div>                            
-              <!--Arrows-->
-              <div>
-                <span>&#9650;</span>
-                <span>&#9660;</span>
-              </div> 
-          </section>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Sedona">
+  <meta name="author" content="alitsman">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <title>HTML Academy: Седона</title>
+</head>
 
+<body>
+  <div class="wrapper">
+    <!--Header-->
+    <header class="page-header">
+      <!--Main navigation-->
+      <nav class="main-nav">
+        <ul class="main-nav-items">
+          <li class="main-nav-item"><a class="main-nav-link global-link" href="">Информация</a></li>
+          <li class="main-nav-item"><a class="main-nav-link global-link" href="">Фото и видео</a></li>
+          <li class="main-nav-item"><a class="main-header-logo" href="index.html"><img
+                src="https://via.placeholder.com/138x70" alt="Logo"></a></li>
+          <li class="main-nav-item"><a class="main-nav-link global-link" href="">Карта штата</a></li>
+          <li class="main-nav-item"><a class="main-nav-link global-link active-tab" href="hotels.html">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Main-->
+    <main>
+      <!--Search form-->
+      <section class="filtering-hotels">
+        <img src="https://via.placeholder.com/1200x217" alt="Search form">
+        <form class="filters" action="hotels.html" method="GET">
+          <!--The form is going to be added later-->
+        </form>
+      </section>
+
+      <!--Sorting Hotels-->
+      <section class="search-results">
+        <h2 class="hidden">Подходящие отели в Седоне</h2>
+        <section class="sorting-hotels">
+          <div class="sorting-hotels-type">
+            <span class="sorting-hotels-title bold-header">Найдено: 3</span><br>
+            <span class="sorting-hotels-list-title">Сортировка:</span>
+            <ul class="sorting-hotels-list">
+              <li class="sorting-hotels-item sorting-hotels-item-chosen"><a href="" class="sorting-hotels-link">По
+                  цене</a></li>
+              <li class="sorting-hotels-item"><a href="" class="sorting-hotels-link">По типу</a></li>
+              <li class="sorting-hotels-item"><a href="" class="sorting-hotels-link">По рейтингу</a></li>
+            </ul>
+          </div>
+          <!--Arrows-->
+          <div class="arrows">
+            <span class="arrow arrow-up">
+              <a href="" class="arrow-up-link">&#9650;</a>
+            </span>
+            <span class="arrow arrow-down">
+              <a href="" class="arrow-down-link">&#9660;</a>
+            </span>
+          </div>
+        </section>
+
+        <ul class="hotels-list">
           <!--Hotel mini card 1-->
-          <section>
-              <div>
-                  <img src="https://via.placeholder.com/135x90" alt="Amara Resort & Spa">                  
+          <li class="hotels-item">
+            <div class="hotels-item-photo">
+              <img src="https://via.placeholder.com/135x90" alt="Amara Resort & Spa">
+            </div>
+            <div class="hotels-item-info">
+              <h3 class="hotels-item-name bold-header"><a href="" class="hotels-item-link global-link">Amara Resort &
+                  Spa</a></h3>
+              <div class="hotels-item-type-price">
+                <span>Гостиница</span>
+                <span>От 4000 Р.</span>
               </div>
-
-              <div>
-                  <h2>Amara Resort & Spa</h2>
-                  <p>
-                      <span>Гостиница</span>
-                      <span>От 4000 Р.</span>
-                  </p>
-                  <ul>
-                      <li><a href="">Подробнее</a></li>
-                      <li><a href="">Забронировать</a></li>
-                  </ul>
+              <div class="hotels-item-buttons">
+                <span class="hotels-item-btn-details btn"><a href="" class="button-link">Подробнее</a></span>
+                <span class="hotels-item-btn-book btn"><a href="" class="button-link">Забронировать</a></span>
               </div>
-
-              <div>
-                <!--Stars-->
-                <p>&#9733;&#9733;&#9733;&#9733;</p>
-                <p>Рейтинг: 8,5</p>
-              </div>              
-          </section>
+            </div>
+            <div class="hotels-item-raiting">
+              <p class="hotels-item-stars">&#9733;&#9733;&#9733;&#9733;</p>
+              <p class="hotels-item-mark">Рейтинг: 8,5</p>
+            </div>
+          </li>
 
           <!--Hotel mini card 2-->
-          <section>
-            <div>
-                <img src="https://via.placeholder.com/135x90" alt="Amara Resort & Spa">                  
+          <li class="hotels-item">
+            <div class="hotels-item-photo">
+              <img src="https://via.placeholder.com/135x90" alt="Desert Quail Inn">
             </div>
-
-            <div>
-                <h2>Desert Quail Inn</h2>
-                <p>
-                    <span>Мотель</span>
-                    <span>От 3000 Р.</span>
-                </p>
-                <ul>
-                    <li><a href="">Подробнее</a></li>
-                    <li><a href="">Забронировать</a></li>
-                </ul>
+            <div class="hotels-item-info">
+              <h3 class="hotels-item-name bold-header"><a href="" class="hotels-item-link global-link">Desert Quail
+                  Inn</a></h3>
+              <div class="hotels-item-type-price">
+                <span>Мотель</span>
+                <span>От 3000 Р.</span>
+              </div>
+              <div class="hotels-item-buttons">
+                <span class="hotels-item-btn-details btn"><a href="" class="button-link">Подробнее</a></span>
+                <span class="hotels-item-btn-book btn"><a href="" class="button-link">Забронировать</a></span>
+              </div>
             </div>
-            
-            <div>
-              <!--Stars-->
-              <p>&#9733;&#9733;&#9733;</p>
-              <p>Рейтинг: 8,9</p>
-            </div>              
-        </section>
-
-        <!--Hotel mini card 3-->
-        <section>
-            <div>
-                <img src="https://via.placeholder.com/135x90" alt="Amara Resort & Spa">                  
+            <div class="hotels-item-raiting">
+              <p class="hotels-item-stars">&#9733;&#9733;&#9733;</p>
+              <p class="hotels-item-mark">Рейтинг: 8,9</p>
             </div>
+          </li>
 
-            <div>
-                <h2>Villas at Poco Diablo</h2>
-                <p>
-                    <span>Апартаменты</span>
-                    <span>От 2000 Р.</span>
-                </p>
-                <ul>
-                    <li><a href="">Подробнее</a></li>
-                    <li><a href="">Забронировать</a></li>
-                </ul>
+          <!--Hotel mini card 3-->
+          <li class="hotels-item">
+            <div class="hotels-item-photo">
+              <img src="https://via.placeholder.com/135x90" alt="Villas at Poco Diablo">
             </div>
-            
-            <div>
-              <!--Stars-->
-              <p>&#9733;&#9733;</p>
-              <p>Рейтинг: 9,2</p>
-            </div>              
-        </section>
-      </main>
+            <div class="hotels-item-info">
+              <h3 class="hotels-item-name bold-header"><a href="" class="hotels-item-link global-link">Villas at Poco
+                  Diablo</a></h3>
+              <div class="hotels-item-type-price">
+                <span>Мотель</span>
+                <span>От 3000 Р.</span>
+              </div>
+              <div class="hotels-item-buttons">
+                <span class="hotels-item-btn-details btn"><a href="" class="button-link">Подробнее</a></span>
+                <span class="hotels-item-btn-book btn"><a href="" class="button-link">Забронировать</a></span>
+              </div>
+            </div>
+            <div class="hotels-item-raiting">
+              <p class="hotels-item-stars">&#9733;&#9733;</p>
+              <p class="hotels-item-mark">Рейтинг: 9,2</p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-      <!--Footer-->
-      <footer>
+        <!--Footer-->
+      <footer class="page-footer">
         <!--Hashtag and phone number-->
-        <div>
-          <p>#visitSEDONA</p>
-          <p>ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+        <div class="footer-contacts">
+          <a href="" class="hashtag global-link">#visitSEDONA</a>
+          <a href="tel:+74956660166" class="phone global-link">+7(495) 666-01-66</a>
         </div>
 
         <!--Social media-->
-        <div>
-          <ul>
-            <li><a href=""><img src="https://via.placeholder.com/17x17" alt="Twitter"></a></li>
-            <li><a href=""><img src="https://via.placeholder.com/12x22" alt="Facebook"></a></li>
-            <li><a href=""><img src="https://via.placeholder.com/20x16" alt="Youtube"></a></li>
+        <div class="footer-media">
+          <ul class="footer-media-list">
+            <li class="footer-media-item"><a href="" class="footer-media-link twitter">T<img
+                    src="https://via.placeholder.com/17x17" alt="Twitter"></a></li>
+            <li class="footer-media-item"><a href="" class="footer-media-link facebook">F<img
+                    src="https://via.placeholder.com/12x22" alt="Facebook"></a></li>
+            <li class="footer-media-item"><a href="" class="footer-media-link youtube">Y<img
+                    src="https://via.placeholder.com/20x16" alt="Youtube"></a></li>
           </ul>
         </div>
 
-        <div>
-          <span>Website by</span>
-          <a href="https://htmlacademy.ru/"><img src="https://via.placeholder.com/115x41" alt="HTML Academy"></a>
+        <div class="footer-developer">
+          <span class="footer-developer-text">Website by</span>
+          <a href="https://htmlacademy.ru/" class="footer-developer-link">HTML Academy<img
+                src="https://via.placeholder.com/115x41" alt="HTML Academy"></a>
         </div>
       </footer>
-    </div>    
-  </body>
+  </div>
+</body>
+
 </html>
