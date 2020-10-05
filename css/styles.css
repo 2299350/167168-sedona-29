@@ -34,6 +34,12 @@ body {
 a {
     text-decoration: none;
 }
+.wrapper {
+    min-width: 1200px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /*Main navigation*/
 .main-nav {
@@ -48,6 +54,22 @@ a {
 
 .global-link:visited {
     color: var(--main-black);
+}
+
+/*Welcome screen*/
+.welcome-screen {
+    background-color: black;
+    height: 509px;
+    line-height: 509px;
+    background-image: 
+    url(../img/shape.png),
+    url(../img/background-photo.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;    
+}
+
+.welcome-screen-img {
+    vertical-align: middle;
 }
 
 /*Order is important*/
@@ -67,18 +89,37 @@ a {
 /*Main*/
 h1, h2, h3, .bold-header  {
     font-size: 21px;
-    font-weight: normal;
+    font-weight: 700;
     line-height: 26px;
     color: var(--main-black);    
 }
 
+.reasons p {
+    line-height: 26px;
+}
+
+.search-intro {
+    line-height: 24px;
+
+}
+
+.search-intro h2 {
+    font-size: 30px;
+    line-height: 24px;
+}
+
 .big-reason {
     background-color: var(--blue-one);
-    color: var(--main-white);
+    color: var(--main-white);    
 }
 
 .big-reason .reason-title {    
     color: var(--main-white);
+    line-height: 21px;
+}
+
+.features-item-title, .reasons-item-title {
+    line-height: 21px;
 }
 
 .small-reasons {
@@ -109,7 +150,7 @@ h1, h2, h3, .bold-header  {
 }
 
 .footer-media-item a {
-    color: var(--main-white);        
+    fill: var(--main-white);        
 }
 
 .footer-media-item:active a {
@@ -122,20 +163,16 @@ h1, h2, h3, .bold-header  {
 }
 
 .footer-developer-link {
-    color: var(--brown-four);
+    fill: var(--brown-four);
+    
 }
 
 .footer-developer-link:hover {
-    color: var(--blue-one);
+    fill: var(--blue-one);
 }
 
 .footer-developer-link:active {
-    color: var(--brown-five);
-}
-
-/*Bold headers*/
-.bold-header {
-    font-weight: 700;
+    fill: var(--brown-five);
 }
 
 /*Sorting*/
