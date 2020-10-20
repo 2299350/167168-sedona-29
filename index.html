@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Sedona">
-    <meta name="author" content="alitsman">    
+    <meta name="author" content="alitsman">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>HTML Academy: Седона</title>
@@ -13,11 +14,11 @@
       <!--Header-->
       <header class="page-header">
         <!--Main navigation-->
+        <a class="main-header-logo" href="index.html"><img src="img/logo.svg" alt="Logo" width="138" height="70"></a>
         <nav class="main-nav">          
           <ul class="main-nav-items">
             <li class="main-nav-item"><a class="main-nav-link global-link" href="">Информация</a></li>
-            <li class="main-nav-item"><a class="main-nav-link global-link" href="">Фото и видео</a></li>
-            <li class="main-nav-item"><a class="main-header-logo" href="index.html"><img src="img/logo.svg" alt="Logo" width="138" height="70"></a></li>      
+            <li class="main-nav-item"><a class="main-nav-link global-link" href="">Фото и видео</a></li>               
             <li class="main-nav-item"><a class="main-nav-link global-link" href="">Карта штата</a></li>
             <li class="main-nav-item"><a class="main-nav-link global-link" href="hotels.html">Гостиницы</a></li>
          </ul>
@@ -45,8 +46,8 @@
             <p>Седона - не аттракцион для туристов, там 
             течёт своя жизнь</p>
           </div>
-          <div class="reason-img ri-right">
-            <img src="https://via.placeholder.com/800x256" alt="Real Town">
+          <div class="reason-img ri-right bg-img">
+            
           </div>
         </section>
 
@@ -74,8 +75,8 @@
 
         <!--Big reason 2-->
         <section class="big-reason second-reason">
-          <div class="reason-img ri-left">
-            <img src="https://via.placeholder.com/800x256" alt="Devil's bridge">
+          <div class="reason-img ri-left bg-img">
+                      
           </div>
           <div class="reason-description">
             <h2 class="reason-title">Там есть Мост дьявола</h2>
@@ -137,7 +138,7 @@
       <footer class="page-footer">
         <!--Hashtag and phone number-->
         <div class="footer-contacts">
-          <a href="" class="hashtag global-link">#visitSEDONA</a>
+          <a href="" class="hashtag global-link">#visitSEDONA</a><br>
           <a href="tel:+74956660166" class="phone global-link">+7(495) 666-01-66</a>
         </div>
 
@@ -149,8 +150,8 @@
                 <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.95 1.14403C12.635 0.648028 13.934 1.41403 14.527 2.32303C15.2 2.09203 15.858 1.84203 16.538 1.61503C16.5249 2.30139 16.2117 2.94755 15.681 3.38303C16.366 3.55303 16.985 2.89203 16.985 2.89203C16.816 3.89203 15.979 4.68003 15.422 4.91603C15.191 11.666 12.247 16.133 5.34498 15.998H4.89898C4.48898 15.998 0.734977 15.538 0.000976562 14.111C2.27198 14.307 3.89398 13.689 4.69398 12.934C3.73398 12.634 2.01498 12.457 1.71498 9.98403C2.06398 10.09 2.27898 10.212 2.90498 10.103C1.70498 9.24703 0.373977 8.53003 0.447977 6.33003C0.732977 6.65803 1.51498 6.86603 1.78798 6.80203C1.08498 6.56103 -0.182023 3.44203 0.893977 1.85003C2.71198 3.70403 4.62898 5.45603 8.04598 5.62303C8.25398 3.33003 9.18298 1.79303 10.95 1.14403Z"/>
                 </svg>
-            </a>
-          </li>
+              </a>
+            </li>
             <li class="footer-media-item">
               <a href="" class="footer-media-link facebook">
                 <svg width="12" height="22" viewBox="0 0 12 22" xmlns="http://www.w3.org/2000/svg">
