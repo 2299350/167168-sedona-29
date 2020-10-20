@@ -42,7 +42,7 @@ a {
     max-width: 1200px;
     margin: 0 auto;    
     min-height: 100vh;
-    grid-template-rows: 56px 1fr 80px;
+    grid-template-rows: 56px 1fr 120px;
 }
 
 /*Main navigation*/
@@ -54,12 +54,9 @@ a {
     display: grid;
     padding-left: 0;
   
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     margin: 0;
-    margin-top: -60px;
-
-    justify-items: center; /*Horizontal alignment*/
-    align-items: center; /*Vertical alignment*/
+    margin-top: -60px;    
 }
 
 .main-nav-item:nth-child(3) {
@@ -102,22 +99,24 @@ a {
     vertical-align: middle;
 }
 
-/*First reason image*/
-.ri-left {
+/*Background images*/
+.bg-img {
     min-height: 100%;
     min-width: 100%;
-    background-image: url(../img/reason-2-img.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
 }
 
+/*First reason image*/
+.ri-left {
+    
+    background-image: url(../img/reason-2-img.jpg);
+    
+}
+
 /*Second reason image*/
 .ri-right {
-    min-height: 100%;
-    min-width: 100%;
     background-image: url(../img/reason-1-img.jpg);
-    background-repeat: no-repeat;
-    background-position: center bottom;
 }
 
 /*Filtering hotels*/
@@ -125,8 +124,6 @@ a {
     min-height: 217px;
     min-width: 1200px;
     background-image: url(../img/filtering-hotels-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center bottom;
 }
 
 
@@ -171,7 +168,7 @@ h1, h2, h3, .bold-header  {
 .features-list {
     display: grid;
   
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 
     height: 256px;
     padding: 0;
@@ -183,13 +180,12 @@ h1, h2, h3, .bold-header  {
 .small-reasons-list {
     display: grid;
   
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 
     height: 256px;
     padding: 0;
-
-    justify-items: center; /*Horizontal alignment*/
-    align-items: center; /*Vertical alignment*/
+    
+    align-items: center;
 }
 
 .hotels-list {
@@ -213,7 +209,7 @@ h1, h2, h3, .bold-header  {
     border-bottom: none;
 }
 
-.page-footer {
+.footer-border {
     border-top: 1px solid var(--hotel-separator);
 }
 
@@ -250,10 +246,9 @@ h1, h2, h3, .bold-header  {
 
 .big-reason {
     background-color: var(--blue-one);
-    color: var(--main-white);
+    color: var(--main-white);    
     
-    justify-items: center; /*Horizontal alignment*/
-    align-items: center; /*Vertical alignment*/
+    align-items: center;
     
     height: 256px;     
 }
@@ -275,19 +270,18 @@ h1, h2, h3, .bold-header  {
 .page-footer {
     display: grid;
   
-    grid-template-columns: 1fr 1fr 1fr;
-
-    height: 120px;
+    grid-template-columns: repeat(3, 1fr);
+    
     padding: 0;
 
-    justify-items: center; /*Horizontal alignment*/
-    align-items: center; /*Vertical alignment*/
+    justify-items: center;
+    align-items: center;
 }
 
 .footer-media-list {
     display: grid;
   
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 
     grid-gap: 6px;
 }
@@ -308,9 +302,10 @@ h1, h2, h3, .bold-header  {
     display: flex;
     width: 46px;
     height: 48px;    
-    background-color: var(--blue-one);
-    justify-items: center; /*Horizontal alignment*/
-    align-items: center; /*Vertical alignment*/
+    background-color: var(--blue-one);    
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
 }
 
 .footer-media-item:active {
@@ -330,8 +325,8 @@ h1, h2, h3, .bold-header  {
 }
 
 .footer-media-link {
-    justify-items: center; /*Horizontal alignment*/
-    align-items: center; /*Vertical alignment*/
+    justify-items: center;
+    align-items: center;
 }
 
 /*HTML Academy Logo*/
@@ -354,7 +349,7 @@ h1, h2, h3, .bold-header  {
 
 /*Sorting*/
 .sorting-hotels-list {
-    padding-left: 40;
+    padding-left: 40px;
     display: flex;
     min-width: 240px;
     justify-content: space-between;    
@@ -363,10 +358,10 @@ h1, h2, h3, .bold-header  {
 .sorting-hotels-type {
     display: flex;
 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 
-    justify-items: center; /*Horizontal alignment*/
-    align-items: center; /*Vertical alignment*/    
+    justify-items: center;
+    align-items: center; 
 }
 
 .sorting-hotels-title {
