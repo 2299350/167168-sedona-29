@@ -149,8 +149,22 @@ h1, h2, h3, .bold-header  {
     color: var(--main-black);    
 }
 
+.reasons {
+    min-height: 216px;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: flex-start;       
+}
+
+.reasons h2 {
+    margin: 42px 0 0 0;
+    max-width: 470px;    
+}
+
 .reasons p {
     line-height: 26px;
+    margin: 42px 0 0 0;    
 }
 
 .first-reason {
@@ -170,11 +184,16 @@ h1, h2, h3, .bold-header  {
   
     grid-template-columns: repeat(3, 1fr);
 
-    height: 256px;
+    height: 330px;
+    margin: 0;
     padding: 0;
 
-    justify-items: center; /*Horizontal alignment*/
-    align-items: center; /*Vertical alignment*/
+    justify-items: center;
+    align-items: center;
+}
+
+.features-item {
+    width: 300px;
 }
 
 .small-reasons-list {
@@ -184,8 +203,24 @@ h1, h2, h3, .bold-header  {
 
     height: 256px;
     padding: 0;
+    margin: 0;
     
+    align-items: center;    
+}
+
+.small-reasons-item {
+    width: 260px;
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+.reasons-item-number, 
+.reason-number {
+    display: block;
+    margin: 5px 0 10px 0;
 }
 
 .hotels-list {
@@ -236,12 +271,48 @@ h1, h2, h3, .bold-header  {
 }
 
 .search-intro {
+    height: 205px;
+    margin: 0;
     line-height: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.search-intro-text {
+    max-width: 435px;    
+
+    margin: 0;
+    padding-top: 40px;
+}
+
+.search-intro-title {    
+    padding-top: 57px;
+    margin: 0;
 }
 
 .search-intro h2 {
     font-size: 30px;
     line-height: 24px;
+}
+
+/*Search form*/
+.search-form-top {
+    max-width: 568px;
+    min-height: 86px;
+    margin: 0 auto;
+    background-color: var(--brown-one);
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form-top-header h2 {
+    color: var(--main-white);
+    
 }
 
 .big-reason {
@@ -256,6 +327,23 @@ h1, h2, h3, .bold-header  {
 .big-reason .reason-title {    
     color: var(--main-white);
     line-height: 21px;
+}
+
+.reason-title {
+    width: 200px;
+    align-self: center;
+}
+
+.reason-description {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    align-self: center;
+    justify-self: center;
+}
+
+.reasons-item-title {
+    width: 120px;
 }
 
 .features-item-title, .reasons-item-title {
@@ -284,6 +372,13 @@ h1, h2, h3, .bold-header  {
     grid-template-columns: repeat(3, 1fr);
 
     grid-gap: 6px;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-contacts a {
@@ -330,6 +425,17 @@ h1, h2, h3, .bold-header  {
 }
 
 /*HTML Academy Logo*/
+.footer-developer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-developer a {
+    margin-left: 8px;
+}
+
+
 .footer-developer-text {
     font-weight: normal;
 }
