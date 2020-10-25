@@ -262,7 +262,27 @@ h1, h2, h3, .bold-header  {
 }
 
 .hotels-item-info {
+    height: 90px;
+    justify-self: start;    
+
+    display: grid;    
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr 27px;
+    column-gap: 7px;    
+}
+
+.hotels-item-info span {    
     justify-self: start;
+}
+
+.btn {
+    max-height: 27px;
+}
+
+.hotels-item-name {
+    margin: 0;
+    grid-column: 1 / span 2;
+    justify-self: flex-start;
 }
 
 .hotels-item-raiting {
