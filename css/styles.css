@@ -15,6 +15,12 @@
     --brown-five: #BDBBBC;
 
     --hotel-separator: #e8e8e8;
+
+    --rgb-white: 255, 255, 255;
+}
+
+.body {
+    background-color: var(--second-grey);
 }
 
 li {
@@ -43,6 +49,9 @@ a {
     margin: 0 auto;    
     min-height: 100vh;
     grid-template-rows: 56px 1fr 120px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background-color: var(--main-white);
 }
 
 /*Main navigation*/
@@ -275,7 +284,7 @@ h1, h2, h3, .bold-header  {
     justify-self: start;
 }
 
-.btn {
+.btn {    
     max-height: 27px;
 }
 
@@ -288,6 +297,10 @@ h1, h2, h3, .bold-header  {
 .hotels-item-raiting {
     justify-self: end;
     padding-right: 73px;
+}
+
+.search {
+    margin-bottom: -120px;
 }
 
 .search-intro {
@@ -328,6 +341,26 @@ h1, h2, h3, .bold-header  {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.search-form-top:hover {
+    background-color: var(--brown-two);
+}
+
+.search-form-top:active {
+    background-color: var(--brown-three);
+}
+
+.search-form-top:active .search-form-top-header{   
+    opacity: 0.3;
+}
+
+.search-form-top-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 86px;
 }
 
 .search-form-top-header h2 {
@@ -375,7 +408,7 @@ h1, h2, h3, .bold-header  {
 }
 
 /*Footer*/
-.page-footer {
+.page-footer {    
     display: grid;
   
     grid-template-columns: repeat(3, 1fr);
@@ -383,7 +416,9 @@ h1, h2, h3, .bold-header  {
     padding: 0;
 
     justify-items: center;
-    align-items: center;
+    align-items: center;   
+
+    background-color: rgba(var(--rgb-white), 0.8);
 }
 
 .footer-media-list {
@@ -439,8 +474,12 @@ h1, h2, h3, .bold-header  {
     opacity: 0.3;
 }
 
-.footer-media-link {
-    justify-items: center;
+.footer-media-link { 
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;    
     align-items: center;
 }
 
@@ -565,8 +604,7 @@ h1, h2, h3, .bold-header  {
 
 /*Buttons*/
 .btn {
-    display: inline-block;    
-    padding: 3px 17px;    
+    display: flex;
     font-weight: 700;
     color: var(--main-white);
 }
@@ -598,7 +636,12 @@ h1, h2, h3, .bold-header  {
 }
 
 /*Button text*/
-.button-link {
+.button-link {    
+    padding: 0 17px;
+    
+
+    align-self: center;
+    
     color: var(--main-white);
 }
 
