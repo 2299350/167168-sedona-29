@@ -284,7 +284,8 @@ h1, h2, h3, .bold-header  {
     justify-self: start;
 }
 
-.btn {    
+.btn {
+    display: flex;
     max-height: 27px;
 }
 
@@ -295,6 +296,10 @@ h1, h2, h3, .bold-header  {
 }
 
 .hotels-item-raiting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
     justify-self: end;
     padding-right: 73px;
 }
@@ -606,7 +611,8 @@ h1, h2, h3, .bold-header  {
 .btn {
     display: flex;
     font-weight: 700;
-    color: var(--main-white);
+
+    color: var(--main-white);   
 }
 
 /*Details button*/
@@ -637,12 +643,15 @@ h1, h2, h3, .bold-header  {
 
 /*Button text*/
 .button-link {    
+    box-sizing: border-box;
     padding: 0 17px;
-    
+    min-height: 27px;
 
-    align-self: center;
-    
     color: var(--main-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn:active .button-link{   
@@ -655,6 +664,7 @@ h1, h2, h3, .bold-header  {
     padding: 3px 14px;    
     background-color: var(--second-grey);
     color: var(--third-grey);
+    margin: 0;  
 }
 
 /*Hotel stars*/
@@ -662,4 +672,5 @@ h1, h2, h3, .bold-header  {
     color: var(--blue-one);
     font-size: 24px;
     text-align: end;
+    margin: 0;
 }
