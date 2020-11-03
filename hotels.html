@@ -33,14 +33,105 @@
     <main>
       <!--Search form-->
       <section class="filtering-hotels bg-img">
-        <form class="filters" action="hotels.html" method="GET">
-          <!--The form is going to be added later-->
-        </form>
+        <div class="search-form-hotels">
+          <form class="hotel-filters" action="https://echo.htmlacademy.ru/" method="GET">
+
+            <div class="filter-wrapper">
+              <fieldset class="hotel-fieldset">
+                <legend class="filter-legend">Инфраструктура:</legend>
+                <ul>
+                  <li>
+                    <label class="filter-label" for="pool">
+                      <input class="hotel-checkbox" type="checkbox" name="pool" id="pool" checked>
+                      <img src="img/checkbox-off.svg" alt="checkbox-off" class="checkbox-off" width="23" height="23">
+                      <img src="img/checkbox-on.svg" alt="checkbox-on" class="checkbox-on" width="27" height="23">
+                      Бассейн
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-label" for="parking">
+                      <input class="hotel-checkbox" type="checkbox" name="parking" id="parking">
+                      <img src="img/checkbox-off.svg" alt="checkbox-off" class="checkbox-off" width="23" height="23">
+                      <img src="img/checkbox-on.svg" alt="checkbox-on" class="checkbox-on" width="27" height="23">
+                      Парковка
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-label" for="wi-fi">
+                      <input class="hotel-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+                      <img src="img/checkbox-off.svg" alt="checkbox-off" class="checkbox-off" width="23" height="23">
+                      <img src="img/checkbox-on.svg" alt="checkbox-on" class="checkbox-on" width="27" height="23">
+                      wi-fi</label>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <fieldset class="hotel-fieldset">
+                <legend class="filter-legend">Тип жилья:</legend>
+                <ul>
+                  <li>
+                    <label class="filter-label" for="hotel">
+                      <input class="hotel-checkbox" type="checkbox" name="hotel" id="hotel" checked>
+                      <img src="img/checkbox-off.svg" alt="checkbox-off" class="checkbox-off" width="23" height="23">
+                      <img src="img/checkbox-on.svg" alt="checkbox-on" class="checkbox-on" width="27" height="23">
+                      Гостиница
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-label" for="motel">
+                      <input class="hotel-checkbox" type="checkbox" name="motel" id="motel" checked>
+                      <img src="img/checkbox-off.svg" alt="checkbox-off" class="checkbox-off" width="23" height="23">
+                      <img src="img/checkbox-on.svg" alt="checkbox-on" class="checkbox-on" width="27" height="23">
+                      Мотель
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-label" for="appartments">
+                      <input class="hotel-checkbox" type="checkbox" name="appartments" id="appartments"  checked>
+                      <img src="img/checkbox-off.svg" alt="checkbox-off" class="checkbox-off" width="23" height="23">
+                      <img src="img/checkbox-on.svg" alt="checkbox-on" class="checkbox-on" width="27" height="23">
+                      Апартаменты
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+
+
+            <div class="filter-wrapper range-wrapper">
+              <fieldset class="hotel-fieldset range-fieldset">
+                <legend class="filter-legend range-legend">Стоимость в сутки (р):</legend>
+                <div class="range-filter">
+                  <div class="price-controls">
+                    <label class="min-price">
+                      <input class="min-price-input" type="number" name="min-price" placeholder="от 0" min="1"
+                        max="5000">
+                    </label>
+                    <label class="max-price">
+                      <input class="max-price-input" type="number" name="max-price" placeholder="до 3000" min="1"
+                        max="5000">
+                    </label>
+                  </div>
+
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle-min toggle" tabindex="0"></div>
+                    <div class="toggle-max toggle" tabindex="0"></div>
+                  </div>
+                </div>
+
+                <button class="hotels-button" type="submit">Показать</button>
+              </fieldset>
+            </div>
+          </form>
+        </div>
       </section>
 
       <!--Sorting Hotels-->
       <section class="search-results">
-        <h2 class="hidden">Подходящие отели в Седоне</h2>
+        <h2 class="visually-hidden">Подходящие отели в Седоне</h2>
         <section class="sorting-hotels">
           <span class="sorting-hotels-title bold-header">Найдено: 3</span>
           <div class="sorting-hotels-type">

@@ -15,6 +15,7 @@
     --brown-three: #503E33;
     --brown-four: #231F20;
     --brown-five: #BDBBBC;
+    --brown-sixth: #ABABAB;
 
     --hotel-separator: #e8e8e8;
 
@@ -37,6 +38,7 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+
 .body {
     background-color: var(--second-grey);
 }
@@ -44,6 +46,8 @@ input[type=number] {
 li {
     list-style-type: none;
 }
+
+
 
 .hidden {
     display: none;
@@ -155,9 +159,219 @@ input {
 
 /*Filtering hotels*/
 .filtering-hotels {
+    display: flex;
     min-height: 217px;
     min-width: 1200px;
     background-image: url(../img/filtering-hotels-bg.jpg);
+}
+
+.search-form-hotels {    
+    box-sizing: border-box;
+    flex-grow: 1;     
+    margin: 25px 70px;
+}
+
+.hotel-filters {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto;    
+}  
+
+.filter-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.filter-wrapper:last-child {
+    justify-self: flex-end;
+}
+
+.range-wrapper { /*Check*/
+    width: 320px;
+    position: relative;
+    flex-direction: column;
+}
+
+.hotel-fieldset {
+    box-sizing: border-box;
+    margin: 0;
+    margin-right: 120px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--main-white);
+    border: none;
+}
+
+.hotel-fieldset ul {
+    margin: 0;
+    padding: 0;
+}
+.hotel-fieldset li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 22px;
+    position: relative; 
+    text-align: start;
+}
+
+.range-fieldset {
+    margin: 0;    
+}
+
+.hotel-fieldset li:last-child {
+    margin: 0;
+}
+
+.filter-label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--main-white);
+    margin-left: 40px;
+    cursor: pointer;    
+}
+
+.filter-legend{  
+    margin-bottom: 24px;
+    text-align: start;
+}
+
+.range-legend {
+    margin-bottom: 11px;
+}
+
+.filter-label img{
+    position: absolute;
+    left: 0;
+}
+
+/*Hotels checkboxes*/
+.hotel-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+.hotel-checkbox ~ .checkbox-off{
+    display: inline;
+} 
+.hotel-checkbox ~ .checkbox-on{
+    display: none;
+}
+.hotel-checkbox:checked ~ .checkbox-off{
+    display: none;
+}
+.hotel-checkbox:checked ~ .checkbox-on{
+    display: inline;
+}
+
+.price-controls {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid var(--main-white);
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+.price-controls label {    
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+	text-transform: uppercase;
+    color: var(--main-white);
+    cursor: pointer;    
+    height: 32px;
+}
+.price-controls input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    text-align: center;
+    width: 139px;
+    margin-left: 12px;
+    margin-top: 6px;
+}
+.min-price-input {
+    border: 1px solid transparent;
+    border-right: 2px solid var(--main-white);
+}
+.max-price-input {
+    border: none;
+}
+
+.price-controls input::placeholder {
+    color: var(--basic-white);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.range-controls {
+    position: relative;
+    height: 21px;
+    padding-top: 9px;
+    margin-bottom: 10px;
+}
+.scale {
+    height: 2px;
+    background: rgba(var(--rgb-white), 0.3);
+    mix-blend-mode: normal;
+}
+.bar {
+    width: 80%;
+    height: 2px;
+    background: var(--main-white);
+}
+.toggle {
+    outline: none;
+    position: absolute;
+    top: 0;    
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid var(--main-white);
+    background-color: var(--brown-sixth);
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 var(--brown-sixth);
+    cursor: pointer;
+}
+.toggle:hover {
+    transform: scale(1.2);
+}
+.toggle-min {    
+    left: 0;
+}
+.toggle-max {
+    left: 80%;    
+}
+
+.hotels-button {
+    width: 137px;
+    height: 36px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color:  var(--main-white);
+    background: transparent;
+    border: 2px solid var(--main-white);
+    box-sizing: border-box;
+    border-radius: 2px;    
+    
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hotels-button:hover {
+    box-sizing: border-box;
+    border: 2px solid var(--main-white);
+    border-radius: 2px;
+    background-color: var(--main-white);
+    color:  var(--main-black);
 }
 
 
@@ -881,4 +1095,13 @@ h1, h2, h3, .bold-header  {
     font-size: 24px;
     text-align: end;
     margin: 0;
+}
+
+/*Should be at the end of the styles.css*/
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;    
 }
