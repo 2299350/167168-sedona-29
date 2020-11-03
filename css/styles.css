@@ -19,6 +19,7 @@
     --hotel-separator: #e8e8e8;
 
     --rgb-white: 255, 255, 255;
+    --rgb-black: 0, 0, 0;
 
     --index-icon-color: #A9A9A9;
 
@@ -74,7 +75,7 @@ input {
     min-height: 100vh;
     grid-template-rows: 56px 1fr 120px;
 
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(var(--rgb-black),0.2);
     background-color: var(--main-white);
 }
 
@@ -395,8 +396,7 @@ h1, h2, h3, .bold-header  {
 /*Svg-icons for index form*/
 .svg {
     fill: var(--index-icon-color);
-    cursor: pointer;
-    margin-left: -30px;
+    cursor: pointer;    
 }
 
 .svg:hover {    
@@ -426,7 +426,8 @@ h1, h2, h3, .bold-header  {
     margin: 0 auto;
     max-width: 568px;
     min-height: 395px;
-    box-sizing: border-box;  
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(var(--rgb-black),0.2);
 }
 
 .index-form {
@@ -477,6 +478,12 @@ h1, h2, h3, .bold-header  {
     cursor: pointer;  
 
     background-color: var(--second-grey);
+}
+
+.calendar-button {
+    padding: 0;
+    margin-left: -30px;
+    background: none;
 }
 
 .plus-minus-svg {
