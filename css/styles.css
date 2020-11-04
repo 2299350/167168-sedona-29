@@ -186,7 +186,7 @@ input {
     justify-self: flex-end;
 }
 
-.range-wrapper { /*Check*/
+.range-wrapper {
     width: 320px;
     position: relative;
     flex-direction: column;
@@ -234,7 +234,7 @@ input {
     cursor: pointer;    
 }
 
-.filter-legend{  
+.filter-legend {  
     margin-bottom: 24px;
     text-align: start;
 }
@@ -243,7 +243,7 @@ input {
     margin-bottom: 11px;
 }
 
-.filter-label img{
+.filter-label img {
     position: absolute;
     left: 0;
 }
@@ -254,18 +254,30 @@ input {
     appearance: none;
   }
 
-.hotel-checkbox ~ .checkbox-off{
+.hotel-checkbox ~ .checkbox-off {
     display: inline;
 } 
-.hotel-checkbox ~ .checkbox-on{
+.hotel-checkbox ~ .checkbox-on {
     display: none;
 }
-.hotel-checkbox:checked ~ .checkbox-off{
+.hotel-checkbox:checked ~ .checkbox-off {
     display: none;
 }
-.hotel-checkbox:checked ~ .checkbox-on{
+.hotel-checkbox:checked ~ .checkbox-on {
     display: inline;
 }
+
+.plus-minus-button:focus,
+.index-button:focus,
+.calendar-button:focus,
+.hotels-button:focus,
+.hotel-checkbox:focus ~ .checkbox-off, 
+.hotel-checkbox:focus ~ .checkbox-on {
+    outline: auto;
+    outline-color: var(--main-black);
+}
+
+
 
 .price-controls {
     display: flex;
@@ -390,7 +402,7 @@ input {
 }
 
 /*Main*/
-h1, h2, h3, .bold-header  {
+h1, h2, h3, .bold-header {
     font-size: 21px;
     font-weight: 700;
     line-height: 26px;
