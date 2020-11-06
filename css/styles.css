@@ -560,6 +560,9 @@ h1, h2, h3, .bold-header {
 }
 
 .search-intro {
+    position: relative;
+    z-index: 3;
+    background-color: var(--main-white);
     height: 205px;
     margin: 0;
     line-height: 24px;
@@ -589,6 +592,8 @@ h1, h2, h3, .bold-header {
 
 /*Search form*/
 .search-form-top {
+    position: relative;
+    z-index: 3;
     max-width: 568px;
     min-height: 86px;
     margin: 0 auto;
@@ -639,9 +644,9 @@ h1, h2, h3, .bold-header {
 }
 
 .centering {    
-    position: absolute;
+    position: absolute;    
     width: 1200px;
-    background: none;
+    background: none;    
 }
 
 
@@ -654,10 +659,48 @@ h1, h2, h3, .bold-header {
     min-height: 395px;
     box-sizing: border-box;
     box-shadow: 0 0 10px rgba(var(--rgb-black),0.2);
+
+    transform: none;
+    opacity: 1;
+    animation-name: form--show;
+    animation-duration: 0.8s;
+}
+
+@keyframes form--show {
+    0% {    
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+  
+    100% {        
+        transform: none;
+        opacity: 1;
+    }
+}
+
+/*Styles for JavaScript*/
+
+.search-form-index--hide {    
+    transform: translateY(-100%);
+    opacity: 0;
+    animation-name: form--hide;
+    animation-duration: 0.8s;
+}
+
+@keyframes form--hide {
+    0% {    
+        transform: none;
+        opacity: 1;
+    }
+  
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
 }
 
 .index-form {
-    padding: 55px;
+    padding: 55px;    
 }
 
 .input-wrapper {
@@ -842,6 +885,8 @@ h1, h2, h3, .bold-header {
 }
 
 .small-reasons {
+    position: relative;
+    z-index: 3;
     background-color: var(--main-grey);
 }
 
