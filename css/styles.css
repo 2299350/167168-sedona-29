@@ -1031,6 +1031,7 @@ h1, h2, h3, .bold-header {
 .sorting-hotels-list-title,
 .sorting-hotels-item {
     display: inline-block;
+    vertical-align: baseline;
     font-size: 12px;
     line-height: 18px;
 }
@@ -1067,7 +1068,8 @@ h1, h2, h3, .bold-header {
 
 /*Arrows*/
 .arrow {
-    display: inline-block;    
+    display: inline-block;
+    vertical-align: baseline;
 }
 
 .arrow a {
@@ -1139,7 +1141,8 @@ h1, h2, h3, .bold-header {
 
 /*Hotel mark*/
 .hotels-item-mark {
-    display: inline-block;    
+    display: inline-block;
+    vertical-align: baseline; 
     padding: 3px 14px;    
     background-color: var(--second-grey);
     color: var(--third-grey);
@@ -1152,6 +1155,12 @@ h1, h2, h3, .bold-header {
     font-size: 24px;
     text-align: end;
     margin: 0;
+}
+
+.iframe-index {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /*Should be at the end of the styles.css*/
