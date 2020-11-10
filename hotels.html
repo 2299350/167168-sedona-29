@@ -6,7 +6,7 @@
   <meta name="description" content="Sedona">
   <meta name="author" content="alitsman">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.min.css">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
   <title>HTML Academy: Седона</title>
@@ -97,18 +97,17 @@
               </fieldset>
             </div>
 
-
             <div class="filter-wrapper range-wrapper">
               <fieldset class="hotel-fieldset range-fieldset">
                 <legend class="filter-legend range-legend">Стоимость в сутки (р):</legend>
                 <div class="range-filter">
                   <div class="price-controls">
                     <label class="min-price">
-                      <input class="min-price-input" type="number" name="min-price" placeholder="от 0" min="1"
+                      <input class="min-price-input number-input" type="number" name="min-price" placeholder="от 0" min="1"
                         max="5000" aria-label="Стоимость в сутки от:">
                     </label>
                     <label class="max-price">
-                      <input class="max-price-input" type="number" name="max-price" placeholder="до 3000" min="1"
+                      <input class="max-price-input number-input" type="number" name="max-price" placeholder="до 3000" min="1"
                         max="5000"  aria-label="Стоимость в сутки до:">
                     </label>
                   </div>

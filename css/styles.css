@@ -26,14 +26,14 @@
 }
 
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
-input[type=number] {
+.number-input[type=number] {
   -moz-appearance: textfield;
 }
 
@@ -159,8 +159,11 @@ a {
 .welcome-screen-img {
     display: block;
     margin: 0 auto;   
-
     vertical-align: middle;
+
+    width: 456px;
+    height: auto;
+    margin-top: -3px;
 }
 
 /*Background images*/
@@ -194,8 +197,7 @@ a {
 .search-form-hotels {    
     box-sizing: border-box;
     flex-grow: 1;     
-    margin: 26px 72px;
-    margin-left: 60px;
+    margin: 26px 72px;    
 }
 
 .hotel-filters {
@@ -225,7 +227,7 @@ a {
     align-items: center;
     box-sizing: border-box;
     margin: 0;
-    margin-right: 130px;
+    margin-right: 118px;
     padding: 0;
     font-weight: 700;
     font-size: 16px;
@@ -237,6 +239,7 @@ a {
 .hotel-fieldset ul {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 .hotel-fieldset li {
     margin: 0;
@@ -763,7 +766,7 @@ h1, h2, h3, .bold-header {
 }
 
 .input-wrapper:not(:first-child) {
-    margin-top: 30px;
+    margin-top: 29px;
 }
 
 .input-wrapper-2 {
@@ -900,7 +903,7 @@ h1, h2, h3, .bold-header {
     position: relative;
     z-index: 1;
     width: 100%;
-    height: 590px;
+    height: 592px;
 }
 
 .big-reason {
@@ -1120,7 +1123,15 @@ h1, h2, h3, .bold-header {
     display: inline-block;
     vertical-align: baseline;
     font-size: 12px;
-    line-height: 18px;   
+    line-height: 18px;    
+}
+
+.sorting-hotels-item {
+    text-overflow: ellipsis;
+    overflow: hidden;    
+    white-space: nowrap;
+    max-width: 80px;   
+    
 }
 
 .sorting-hotels-item:not(:last-child) {
@@ -1188,7 +1199,8 @@ h1, h2, h3, .bold-header {
 }
 
 /*Details button*/
-.hotels-item-btn-details {    
+.hotels-item-btn-details {
+    max-width: 111px; 
     background-color: var(--blue-one);
 }
 
@@ -1202,10 +1214,7 @@ h1, h2, h3, .bold-header {
 
 /*Book button*/
 .hotels-item-btn-book {
-    max-width: 142px;
-    text-overflow: ellipsis;
-    overflow: hidden;    
-    white-space: nowrap;
+    max-width: 143px;    
     background-color: var(--brown-one);
 }
 
@@ -1219,15 +1228,20 @@ h1, h2, h3, .bold-header {
 
 /*Button text*/
 .button-link {    
+    display: block;
     box-sizing: border-box;
     padding: 0 17px;
     min-height: 27px;
 
-    color: var(--main-white);
+    text-overflow: ellipsis;
+    overflow: hidden;    
+    white-space: nowrap;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;    
+    max-width: 100%;
+    line-height: 21px;
+    padding-top: 3px;
+
+    color: var(--main-white); 
 }
 
 .btn:active .button-link{   
